@@ -85,12 +85,6 @@
   );
   statEls.forEach((el) => observer.observe(el));
 
-  document.querySelectorAll(".skill[data-level]").forEach((skill) => {
-    const bar = skill.querySelector(".skill-bar span");
-    const level = skill.dataset.level;
-    if (bar) requestAnimationFrame(() => { bar.style.width = `${level}%`; });
-  });
-
   const modal = document.getElementById("cert-modal");
   const modalImg = modal?.querySelector("img");
   const modalTitle = modal?.querySelector(".modal-title");
