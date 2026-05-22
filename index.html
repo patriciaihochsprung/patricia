@@ -3,362 +3,435 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Currículo de Patricia Ivana Veiga Hochsprung — Assistente Administrativo">
-  <title>Patricia Ivana Veiga Hochsprung — Currículo</title>
+  <meta name="description" content="Patricia Ivana Veiga Hochsprung — Assistente Administrativo em Joinville/SC. Experiência em atendimento, rotinas de escritório e farmácia.">
+  <title>Patricia Hochsprung | Assistente Administrativo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --azul: #1e3a5f;
-      --azul-claro: #2c5282;
-      --texto: #2d3748;
-      --texto-suave: #4a5568;
-      --borda: #e2e8f0;
-      --fundo: #ffffff;
-    }
-
-    html {
-      font-size: 9.5pt;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-
-    body {
-      font-family: "Open Sans", Arial, Helvetica, sans-serif;
-      color: var(--texto);
-      background: #edf2f7;
-      line-height: 1.35;
-    }
-
-    .sheet {
-      width: 210mm;
-      min-height: 297mm;
-      max-height: 297mm;
-      margin: 12px auto;
-      background: var(--fundo);
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Cabeçalho */
-    header {
-      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
-      color: #fff;
-      padding: 14mm 14mm 10mm;
-      flex-shrink: 0;
-    }
-
-    header h1 {
-      font-size: 17pt;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      line-height: 1.2;
-      margin-bottom: 4px;
-    }
-
-    header .titulo-cargo {
-      font-size: 10pt;
-      font-weight: 600;
-      opacity: 0.92;
-      margin-bottom: 10px;
-    }
-
-    .contato {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 18px;
-      font-size: 8.5pt;
-      font-weight: 400;
-    }
-
-    .contato span,
-    .contato a {
-      color: #e8f0fa;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .contato a:hover { text-decoration: underline; }
-
-    .contato strong {
-      color: #fff;
-      font-weight: 600;
-    }
-
-    /* Corpo */
-    main {
-      padding: 9mm 14mm 11mm;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    section h2 {
-      font-size: 9.5pt;
-      font-weight: 700;
-      color: var(--azul);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      border-bottom: 2px solid var(--azul);
-      padding-bottom: 3px;
-      margin-bottom: 5px;
-    }
-
-    section p,
-    section li {
-      font-size: 9pt;
-      color: var(--texto);
-    }
-
-    .objetivo p {
-      text-align: justify;
-      color: var(--texto-suave);
-      line-height: 1.4;
-    }
-
-    /* Experiência */
-    .exp-item {
-      margin-bottom: 6px;
-    }
-
-    .exp-item:last-child { margin-bottom: 0; }
-
-    .exp-cabecalho {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 2px;
-    }
-
-    .exp-empresa {
-      font-weight: 700;
-      font-size: 9.5pt;
-      color: var(--azul);
-    }
-
-    .exp-cargo {
-      font-weight: 600;
-      font-size: 9pt;
-      color: var(--texto);
-    }
-
-    .exp-periodo {
-      font-size: 8pt;
-      color: var(--texto-suave);
-      white-space: nowrap;
-    }
-
-    .exp-item ul {
-      margin-left: 14px;
-      padding-left: 0;
-    }
-
-    .exp-item li {
-      margin-bottom: 1px;
-      color: var(--texto-suave);
-      line-height: 1.32;
-    }
-
-    /* Formação */
-    .formacao-linha {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 6px;
-      flex-wrap: wrap;
-      font-size: 9pt;
-      margin-bottom: 3px;
-    }
-
-    .formacao-linha strong { color: var(--texto); }
-
-    .formacao-inst {
-      color: var(--texto-suave);
-      font-size: 8.5pt;
-    }
-
-    /* Habilidades em duas colunas */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px 12px;
-      list-style: none;
-    }
-
-    .skills-grid li {
-      position: relative;
-      padding-left: 11px;
-      font-size: 8.8pt;
-      color: var(--texto-suave);
-      line-height: 1.3;
-    }
-
-    .skills-grid li::before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: var(--azul-claro);
-      font-size: 8pt;
-    }
-
-    .extras {
-      font-size: 8.5pt;
-      color: var(--texto-suave);
-      margin-top: 2px;
-    }
-
-    .extras span {
-      display: inline-block;
-      margin-right: 10px;
-    }
-
-    @page {
-      size: A4 portrait;
-      margin: 0;
-    }
-
-    @media print {
-      body {
-        background: #fff;
-        margin: 0;
-      }
-
-      .sheet {
-        width: 210mm;
-        height: 297mm;
-        max-height: 297mm;
-        margin: 0;
-        box-shadow: none;
-        page-break-after: avoid;
-        page-break-inside: avoid;
-      }
-    }
-
-    @media screen and (max-width: 220mm) {
-      .sheet {
-        width: 100%;
-        min-height: auto;
-        max-height: none;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-  <article class="sheet">
-    <header>
-      <h1>Patricia Ivana Veiga Hochsprung</h1>
-      <p class="titulo-cargo">Assistente Administrativo · Atendimento · Rotinas de Escritório</p>
-      <div class="contato">
-        <span><strong>Local:</strong> Joinville — SC</span>
-        <span><strong>Tel./WhatsApp:</strong> <a href="tel:+55479999080872">(47) 99908-0872</a></span>
-        <span><strong>E-mail:</strong> <a href="mailto:patricia.i.hochsprung@gmail.com">patricia.i.hochsprung@gmail.com</a></span>
-        <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/patricia-hochsprung" target="_blank" rel="noopener">linkedin.com/in/patricia-hochsprung</a></span>
-        <span><strong>CNH:</strong> B</span>
+<body data-theme="dark">
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <nav>
+    <div class="nav-wrap">
+      <a class="logo" href="#top">
+        <span class="logo-badge">PH</span>
+        Patricia Hochsprung
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre" class="active">Sobre</a></li>
+        <li><a href="#destaques">Destaques</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#certificados">Certificados</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Alternar tema claro/escuro">◐</button>
+        <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-label="Abrir menu">☰</button>
       </div>
-    </header>
+    </div>
+  </nav>
 
-    <main>
-      <section class="objetivo">
-        <h2>Objetivo Profissional</h2>
-        <p>Atuar como Assistente Administrativo, aplicando habilidades em organização de documentos, atendimento ao cliente, controle de planilhas e rotinas de escritório para contribuir com a eficiência dos processos da empresa.</p>
-      </section>
-
-      <section>
-        <h2>Experiência Profissional</h2>
-
-        <div class="exp-item">
-          <div class="exp-cabecalho">
-            <div>
-              <div class="exp-empresa">Excelência Consultoria RH</div>
-              <div class="exp-cargo">Assistente Administrativo</div>
-            </div>
-          </div>
-          <ul>
-            <li>Agendamento de entrevistas, apoio em vendas e prestação de serviços de RH.</li>
-            <li>Organização de agenda, contato com candidatos e rotinas administrativas do escritório.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-cabecalho">
-            <div>
-              <div class="exp-empresa">Farmácia Angeloni</div>
-              <div class="exp-cargo">Assistente Farmacêutica / Atendimento e Administrativo</div>
-            </div>
-          </div>
-          <ul>
-            <li>Atendimento ao público, operação de caixa e suporte sobre medicamentos.</li>
-            <li>Reposição e organização da loja; entrada de notas fiscais e mapeamento de necessidades.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-cabecalho">
-            <div>
-              <div class="exp-empresa">Farmácia e Drogaria JK</div>
-              <div class="exp-cargo">Assistente Farmacêutica</div>
-            </div>
-          </div>
-          <ul>
-            <li>Atendimento no balcão, reposição de medicamentos e verificação de validade.</li>
-            <li>Aferição de pressão, aplicação de injetáveis e operação de caixa.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-cabecalho">
-            <div>
-              <div class="exp-empresa">Drogaria Araquari · Farmácia Santa Terezinha · Arte Sani · Animal Farma</div>
-              <div class="exp-cargo">Assistente Farmacêutica / Recepção</div>
-            </div>
-          </div>
-          <ul>
-            <li>Atendimento ao consumidor, cadastro de produtos em sistema e pedidos de compra.</li>
-            <li>Controle de validade, testes de glicemia e levantamento de feedbacks de clientes.</li>
-            <li>Recepção em manipulação (florais, antibióticos, cosméticos) e rotinas de balcão.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <h2>Formação Acadêmica</h2>
-        <div class="formacao-linha">
-          <strong>Ensino Médio Completo</strong>
-          <span class="formacao-inst">E.E. Plácido Olímpio de Oliveira — Joinville/SC</span>
-        </div>
-        <div class="formacao-linha">
-          <strong>Terceiro Grau (Superior)</strong>
-          <span class="formacao-inst">Em andamento / incompleto</span>
-        </div>
-      </section>
-
-      <section>
-        <h2>Habilidades e Competências</h2>
-        <ul class="skills-grid">
-          <li>Pacote Office (Excel, Word) — nível intermediário a avançado</li>
-          <li>Boa comunicação verbal e escrita</li>
-          <li>Organização, gestão de tempo e proatividade</li>
-          <li>Atendimento ao cliente e trabalho em equipe</li>
-          <li>Rotinas de faturamento e contas a pagar/receber</li>
-          <li>Entrada de notas fiscais e controle administrativo de loja</li>
-          <li>Sistemas: SAP, Method, Farma Fácil, Trier</li>
-          <li>Informática e operação de caixa / ERP de farmácia</li>
-          <li>Inglês e Espanhol — nível básico</li>
-          <li>Curso de Brigadista · CNH categoria B</li>
-        </ul>
-        <p class="extras">
-          <span><strong>Idiomas:</strong> Inglês (básico) · Espanhol (básico)</span>
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-main">
+        <p class="eyebrow">Me conheça melhor</p>
+        <h1>
+          Patricia Ivana
+          <span>Veiga Hochsprung</span>
+        </h1>
+        <p class="hero-lead">
+          Profissional com sólida experiência em atendimento ao público, rotinas administrativas,
+          farmácia e escritório. Busco atuar como <strong>Assistente Administrativo</strong>,
+          contribuindo com organização, comunicação e eficiência nos processos da empresa.
         </p>
-      </section>
-    </main>
-  </article>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#experiencia">Ver experiência</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/55479999080872" target="_blank" rel="noopener">Falar comigo</a>
+          <a class="btn btn-secondary" href="#certificados">Ver certificados</a>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <strong data-count="8" data-suffix="+">0</strong>
+            <span>Anos de experiência</span>
+          </div>
+          <div class="stat">
+            <strong data-count="7" data-suffix="+">0</strong>
+            <span>Empresas na jornada</span>
+          </div>
+          <div class="stat">
+            <strong data-count="5">0</strong>
+            <span>Certificados</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="glass-card">
+          <h3>Resumo rápido</h3>
+          <ul>
+            <li>Atendimento ao público e operação de caixa</li>
+            <li>Organização de documentos e arquivos</li>
+            <li>Entrada de notas fiscais e rotinas de loja</li>
+            <li>Agendamentos e apoio administrativo em RH</li>
+          </ul>
+        </div>
+        <div class="glass-card">
+          <h3>Status profissional</h3>
+          <p style="color: var(--muted); font-size: 0.9rem;">
+            Disponível para oportunidades como Assistente Administrativo, Auxiliar de Escritório
+            e funções correlatas em Joinville e região.
+          </p>
+          <span class="status-pill">Disponível para entrevistas</span>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <div class="container grid-2">
+        <div class="section-head about-text">
+          <p class="label">Sobre mim</p>
+          <h2>Perfil profissional</h2>
+          <p>
+            Sou comunicativa, organizada e orientada a resultados. Tenho experiência em ambientes
+            de alto fluxo — farmácias, drogarias e consultoria de RH — onde precisei aliar
+            atendimento humanizado, controle de processos e uso de sistemas.
+          </p>
+          <p>
+            Atuo com foco em <strong>organização de documentos</strong>, <strong>planilhas</strong>,
+            <strong>atendimento ao cliente</strong> e <strong>rotinas de escritório</strong>,
+            sempre buscando agilidade e qualidade na entrega do dia a dia.
+          </p>
+          <div class="tags">
+            <span class="tag">Atendimento</span>
+            <span class="tag">Pacote Office</span>
+            <span class="tag">Farmácia</span>
+            <span class="tag">Notas fiscais</span>
+            <span class="tag">SAP</span>
+            <span class="tag">Organização</span>
+            <span class="tag">CNH B</span>
+            <span class="tag">Brigadista</span>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="section-head" style="margin-bottom: 16px;">
+            <p class="label">Contato direto</p>
+            <h2 style="font-size: 1.25rem;">Canais</h2>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <small>WhatsApp / Telefone</small>
+              <a href="tel:+55479999080872">(47) 99908-0872</a>
+            </li>
+            <li>
+              <small>E-mail</small>
+              <a href="mailto:patricia.i.hochsprung@gmail.com">patricia.i.hochsprung@gmail.com</a>
+            </li>
+            <li>
+              <small>LinkedIn</small>
+              <a href="https://www.linkedin.com/in/patricia-hochsprung" target="_blank" rel="noopener">linkedin.com/in/patricia-hochsprung</a>
+            </li>
+            <li>
+              <small>Localização</small>
+              <a href="#contato">Joinville — SC, Brasil</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="destaques">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">Destaques</p>
+          <h2>O que entrego no dia a dia</h2>
+          <p>Competências desenvolvidas em atendimento, farmácia e rotinas administrativas.</p>
+        </div>
+        <div class="highlights">
+          <article class="highlight">
+            <h3>Atendimento de excelência</h3>
+            <p>Experiência em balcão, telefone e suporte personalizado ao cliente em farmácias e drogarias.</p>
+            <span class="badge">Foco no cliente</span>
+          </article>
+          <article class="highlight">
+            <h3>Rotinas administrativas</h3>
+            <p>Agendamento de entrevistas, organização de agenda e apoio em vendas e serviços de RH.</p>
+            <span class="badge">Escritório &amp; RH</span>
+          </article>
+          <article class="highlight">
+            <h3>Controle e organização</h3>
+            <p>Entrada de NF, reposição, validade de produtos, cadastro em sistemas e gestão de estoque.</p>
+            <span class="badge">Processos organizados</span>
+          </article>
+          <article class="highlight">
+            <h3>Operação de caixa</h3>
+            <p>Recebimentos, fechamento de caixa e rotinas financeiras do balcão com agilidade e cuidado.</p>
+            <span class="badge">Agilidade</span>
+          </article>
+          <article class="highlight">
+            <h3>Sistemas e informática</h3>
+            <p>SAP, Method, Farma Fácil, Trier e pacote Office aplicados na rotina operacional.</p>
+            <span class="badge">Ferramentas</span>
+          </article>
+          <article class="highlight">
+            <h3>Segurança do trabalho</h3>
+            <p>Certificações em brigada de incêndio, NR-20, EPI, PAE e benzeno — perfil completo e atualizado.</p>
+            <span class="badge">5 certificados</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">Carreira</p>
+          <h2>Experiência profissional</h2>
+          <p>Trajetória em farmácias, drogarias e ambiente administrativo de consultoria em RH.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item featured">
+            <div class="timeline-top">
+              <div>
+                <h3>Excelência Consultoria RH</h3>
+                <p class="role">Assistente Administrativo</p>
+              </div>
+            </div>
+            <ul>
+              <li>Agendamento de entrevistas, apoio em vendas e prestação de serviços de RH.</li>
+              <li>Organização de agenda, contato com candidatos e rotinas do escritório.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <h3>Farmácia Angeloni</h3>
+                <p class="role">Assistente Farmacêutica · Atendimento e Administrativo</p>
+              </div>
+            </div>
+            <ul>
+              <li>Atendimento ao público, caixa e orientação sobre medicamentos.</li>
+              <li>Reposição, organização da loja, entrada de notas fiscais e mapeamento de necessidades.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <h3>Farmácia e Drogaria JK</h3>
+                <p class="role">Assistente Farmacêutica</p>
+              </div>
+            </div>
+            <ul>
+              <li>Atendimento no balcão, reposição e verificação de validade de medicamentos.</li>
+              <li>Aferição de pressão, aplicação de injetáveis e operação de caixa.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <h3>Drogaria Araquari · Santa Terezinha · Arte Sani · Animal Farma</h3>
+                <p class="role">Assistente Farmacêutica / Recepção</p>
+              </div>
+            </div>
+            <ul>
+              <li>Cadastro de produtos, pedidos de compra e atendimento ao consumidor.</li>
+              <li>Controle de validade, testes de glicemia e levantamento de feedbacks.</li>
+              <li>Recepção em manipulação (florais, antibióticos, cosméticos).</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">Competências</p>
+          <h2>Habilidades</h2>
+          <p>Conhecimentos aplicados no dia a dia administrativo, comercial e operacional.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill" data-level="85">
+            <div class="skill-head"><span>Microsoft Office (Excel / Word)</span><span>85%</span></div>
+            <div class="skill-bar"><span></span></div>
+          </div>
+          <div class="skill" data-level="90">
+            <div class="skill-head"><span>Atendimento ao cliente</span><span>90%</span></div>
+            <div class="skill-bar"><span></span></div>
+          </div>
+          <div class="skill" data-level="88">
+            <div class="skill-head"><span>Organização e gestão de tempo</span><span>88%</span></div>
+            <div class="skill-bar"><span></span></div>
+          </div>
+          <div class="skill" data-level="82">
+            <div class="skill-head"><span>Comunicação verbal e escrita</span><span>82%</span></div>
+            <div class="skill-bar"><span></span></div>
+          </div>
+          <div class="skill" data-level="75">
+            <div class="skill-head"><span>Sistemas (SAP, Method, Farma Fácil)</span><span>75%</span></div>
+            <div class="skill-bar"><span></span></div>
+          </div>
+          <div class="skill" data-level="70">
+            <div class="skill-head"><span>Faturamento / contas a pagar e receber</span><span>70%</span></div>
+            <div class="skill-bar"><span></span></div>
+          </div>
+          <div class="skill" data-level="55">
+            <div class="skill-head"><span>Inglês</span><span>55%</span></div>
+            <div class="skill-bar"><span></span></div>
+          </div>
+          <div class="skill" data-level="50">
+            <div class="skill-head"><span>Espanhol</span><span>50%</span></div>
+            <div class="skill-bar"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificados">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">Formação</p>
+          <h2>Certificados e formação</h2>
+          <p>Clique em um certificado para ampliar. Documentos disponíveis para consulta.</p>
+        </div>
+
+        <div class="edu-cards">
+          <article class="edu-card">
+            <h3>Ensino Médio Completo</h3>
+            <p>E.E. Plácido Olímpio de Oliveira — Joinville/SC</p>
+          </article>
+          <article class="edu-card">
+            <h3>Terceiro Grau (Superior)</h3>
+            <p>Em andamento / incompleto</p>
+          </article>
+        </div>
+
+        <div class="certs-grid">
+          <button type="button" class="cert-card" data-cert
+            data-src="public/1.jpeg"
+            data-title="Brigada de Incêndio — 16 horas"
+            data-desc="Angeloni &amp; Cia. Ltda · Joinville, abril/2024 · Programa Como um Brinde à Vida.">
+            <div class="cert-thumb">
+              <img src="public/1.jpeg" alt="Certificado Brigada de Incêndio" loading="lazy" width="400" height="300">
+            </div>
+            <div class="cert-body">
+              <h3>Brigada de Incêndio</h3>
+              <p>Angeloni · 16h · Abr/2024</p>
+            </div>
+          </button>
+
+          <button type="button" class="cert-card" data-cert
+            data-src="public/2.jpeg"
+            data-title="NR 20 — Classe I (Inflamáveis e Combustíveis)"
+            data-desc="Grupo Babitonga Engenharia · Joinville/SC · 24 e 25/02/2026.">
+            <div class="cert-thumb">
+              <img src="public/2.jpeg" alt="Certificado NR 20 Classe I" loading="lazy" width="400" height="300">
+            </div>
+            <div class="cert-body">
+              <h3>NR 20 — Classe I</h3>
+              <p>Babitonga Engenharia · Fev/2026</p>
+            </div>
+          </button>
+
+          <button type="button" class="cert-card" data-cert
+            data-src="public/3.jpeg"
+            data-title="PAE — Plano de Atendimento Emergencial"
+            data-desc="Grupo Babitonga Engenharia · Joinville/SC · 24 e 25/02/2026.">
+            <div class="cert-thumb">
+              <img src="public/3.jpeg" alt="Certificado PAE" loading="lazy" width="400" height="300">
+            </div>
+            <div class="cert-body">
+              <h3>PAE — Emergências</h3>
+              <p>Babitonga Engenharia · Fev/2026</p>
+            </div>
+          </button>
+
+          <button type="button" class="cert-card" data-cert
+            data-src="public/4.jpeg"
+            data-title="Treinamento de EPI — NR-6"
+            data-desc="Grupo Babitonga Engenharia · Equipamentos de Proteção Individual · Fev/2026.">
+            <div class="cert-thumb">
+              <img src="public/4.jpeg" alt="Certificado EPI NR-6" loading="lazy" width="400" height="300">
+            </div>
+            <div class="cert-body">
+              <h3>EPI — NR-6</h3>
+              <p>Babitonga Engenharia · Fev/2026</p>
+            </div>
+          </button>
+
+          <button type="button" class="cert-card" data-cert
+            data-src="public/5.jpeg"
+            data-title="Treinamento de Benzeno — NR-20 Anexo IV"
+            data-desc="Grupo Babitonga Engenharia · Portaria 427/2021 · Postos revendedores · Fev/2026.">
+            <div class="cert-thumb">
+              <img src="public/5.jpeg" alt="Certificado Benzeno NR-20" loading="lazy" width="400" height="300">
+            </div>
+            <div class="cert-body">
+              <h3>Benzeno — NR-20</h3>
+              <p>Babitonga Engenharia · Fev/2026</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container contact-grid">
+        <div class="section-head">
+          <p class="label">Contato</p>
+          <h2>Vamos conversar?</h2>
+          <p>
+            Estou aberta a oportunidades como Assistente Administrativo, Auxiliar de Escritório
+            e áreas correlatas. Será um prazer conversar!
+          </p>
+        </div>
+        <div class="contact-cards">
+          <a class="social-card" href="https://wa.me/55479999080872" target="_blank" rel="noopener">
+            <span>WhatsApp</span>
+            <strong>(47) 99908-0872</strong>
+          </a>
+          <a class="social-card" href="tel:+55479999080872">
+            <span>Telefone</span>
+            <strong>Ligar agora</strong>
+          </a>
+          <a class="social-card" href="https://www.linkedin.com/in/patricia-hochsprung" target="_blank" rel="noopener">
+            <span>LinkedIn</span>
+            <strong>patricia-hochsprung</strong>
+          </a>
+          <a class="social-card" href="mailto:patricia.i.hochsprung@gmail.com">
+            <span>E-mail</span>
+            <strong>Enviar mensagem</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Desenvolvido por Patricia Ivana Veiga Hochsprung · Joinville — SC
+    </div>
+  </footer>
+
+  <div class="modal" id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button type="button" class="modal-close" data-close-modal aria-label="Fechar">×</button>
+      <img src="" alt="">
+      <div class="modal-info">
+        <h3 class="modal-title" id="modal-cert-title"></h3>
+        <p class="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

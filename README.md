@@ -1,30 +1,35 @@
 # Currículo — Patricia Ivana Veiga Hochsprung
 
-Currículo em HTML (uma página A4) focado em **Assistente Administrativo**, publicável no GitHub Pages.
+Portfólio profissional em HTML/CSS inspirado em layout moderno, com seções interativas e **galeria de certificados**.
 
 ## Visualizar localmente
 
-1. Abra `curriculo.html` ou `index.html` no navegador (Chrome ou Edge recomendados).
-2. **Imprimir → Salvar como PDF**
-   - Papel: **A4**
-   - Margens: **Nenhuma** ou **Mínimas**
-   - Marque **Gráficos de fundo** (para manter o cabeçalho azul)
+Abra `index.html` no navegador ou use uma extensão Live Server.
 
 ## Publicar no GitHub Pages
 
-1. Envie este repositório para `https://github.com/patriciaihochsprung/patricia`
-2. No GitHub: **Settings → Pages**
-3. **Source:** Deploy from a branch
-4. **Branch:** `main` · pasta **`/ (root)`**
-5. Salve. O site ficará em:  
-   `https://patriciaihochsprung.github.io/patricia/`
+1. Envie o repositório para [github.com/patriciaihochsprung/patricia](https://github.com/patriciaihochsprung/patricia)
+2. **Settings → Pages → Branch:** `main` · pasta **`/ (root)`**
+3. URL: **https://patriciaihochsprung.github.io/patricia/**
 
-O arquivo `index.html` na raiz é servido automaticamente como página inicial.
+## Estrutura
 
-## Arquivos
+| Caminho | Descrição |
+|---------|-----------|
+| `index.html` | Página principal |
+| `curriculo.html` | Redireciona para `index.html` |
+| `assets/css/style.css` | Estilos (tema claro/escuro) |
+| `assets/js/main.js` | Menu, contadores, modal de certificados |
+| `public/*.jpeg` | Imagens dos certificados |
 
-| Arquivo | Uso |
-|---------|-----|
-| `index.html` | Página principal (GitHub Pages) |
-| `curriculo.html` | Cópia para salvar/abrir localmente |
-| `1.pdf`, `2.pdf` | Referências do currículo anterior |
+## Certificados incluídos
+
+1. Brigada de Incêndio — Angeloni (16h)
+2. NR 20 Classe I — Babitonga Engenharia
+3. PAE — Plano de Atendimento Emergencial
+4. EPI — NR-6
+5. Benzeno — NR-20 Anexo IV
+
+## Gerar PDF (opcional)
+
+No navegador: `Ctrl+P` → Salvar como PDF. Para versão compacta de uma página, use margens mínimas e desative elementos extras se necessário.
