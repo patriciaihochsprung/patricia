@@ -41,7 +41,7 @@ Abra `index.html` no navegador ou use uma extensão Live Server.
 ```powershell
 $uri = [uri]::new("d:\Projetos\Patricia\patricia\curriculo-print.html").AbsoluteUri
 & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" `
-  --headless --disable-gpu --print-to-pdf="d:\Projetos\Patricia\patricia\public\curriculo.pdf" $uri
+  --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="d:\Projetos\Patricia\patricia\public\curriculo.pdf" $uri
 ```
 
 Edite `curriculo-print.html` antes de rodar o comando, se alterar o conteúdo do currículo.

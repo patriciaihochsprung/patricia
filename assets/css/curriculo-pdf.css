@@ -193,13 +193,10 @@ h2 {
   color: #0f2744;
 }
 
-.footer-note {
-  margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px solid #e2e8f0;
-  font-size: 7.5pt;
-  color: #94a3b8;
-  text-align: center;
+.print-hint {
+  font-size: 0.8rem;
+  color: #64748b;
+  align-self: center;
 }
 
 @media print {
@@ -224,8 +221,10 @@ h2 {
     max-width: 210mm;
     margin: 0 auto 12px;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    align-items: center;
   }
 
   .print-bar button,

@@ -13,7 +13,7 @@ if (-not $edge) {
 }
 
 $uri = [uri]::new($html).AbsoluteUri
-& $edge --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf="$pdf" $uri
+& $edge --headless --disable-gpu --no-pdf-header-footer --run-all-compositor-stages-before-draw --print-to-pdf="$pdf" $uri
 Start-Sleep -Seconds 2
 
 if (Test-Path $pdf) {
