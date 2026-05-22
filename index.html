@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículo de Patricia Ivana Veiga Hochsprung — Assistente Administrativo">
+  <title>Patricia Ivana Veiga Hochsprung — Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --azul: #1e3a5f;
+      --azul-claro: #2c5282;
+      --texto: #2d3748;
+      --texto-suave: #4a5568;
+      --borda: #e2e8f0;
+      --fundo: #ffffff;
+    }
+
+    html {
+      font-size: 9.5pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: "Open Sans", Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: #edf2f7;
+      line-height: 1.35;
+    }
+
+    .sheet {
+      width: 210mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      margin: 12px auto;
+      background: var(--fundo);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+      color: #fff;
+      padding: 14mm 14mm 10mm;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-size: 17pt;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    header .titulo-cargo {
+      font-size: 10pt;
+      font-weight: 600;
+      opacity: 0.92;
+      margin-bottom: 10px;
+    }
+
+    .contato {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 8.5pt;
+      font-weight: 400;
+    }
+
+    .contato span,
+    .contato a {
+      color: #e8f0fa;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .contato a:hover { text-decoration: underline; }
+
+    .contato strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Corpo */
+    main {
+      padding: 9mm 14mm 11mm;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    section h2 {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--azul);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 2px solid var(--azul);
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+    }
+
+    section p,
+    section li {
+      font-size: 9pt;
+      color: var(--texto);
+    }
+
+    .objetivo p {
+      text-align: justify;
+      color: var(--texto-suave);
+      line-height: 1.4;
+    }
+
+    /* Experiência */
+    .exp-item {
+      margin-bottom: 6px;
+    }
+
+    .exp-item:last-child { margin-bottom: 0; }
+
+    .exp-cabecalho {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+    }
+
+    .exp-empresa {
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: var(--azul);
+    }
+
+    .exp-cargo {
+      font-weight: 600;
+      font-size: 9pt;
+      color: var(--texto);
+    }
+
+    .exp-periodo {
+      font-size: 8pt;
+      color: var(--texto-suave);
+      white-space: nowrap;
+    }
+
+    .exp-item ul {
+      margin-left: 14px;
+      padding-left: 0;
+    }
+
+    .exp-item li {
+      margin-bottom: 1px;
+      color: var(--texto-suave);
+      line-height: 1.32;
+    }
+
+    /* Formação */
+    .formacao-linha {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+      flex-wrap: wrap;
+      font-size: 9pt;
+      margin-bottom: 3px;
+    }
+
+    .formacao-linha strong { color: var(--texto); }
+
+    .formacao-inst {
+      color: var(--texto-suave);
+      font-size: 8.5pt;
+    }
+
+    /* Habilidades em duas colunas */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 12px;
+      list-style: none;
+    }
+
+    .skills-grid li {
+      position: relative;
+      padding-left: 11px;
+      font-size: 8.8pt;
+      color: var(--texto-suave);
+      line-height: 1.3;
+    }
+
+    .skills-grid li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--azul-claro);
+      font-size: 8pt;
+    }
+
+    .extras {
+      font-size: 8.5pt;
+      color: var(--texto-suave);
+      margin-top: 2px;
+    }
+
+    .extras span {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        margin: 0;
+      }
+
+      .sheet {
+        width: 210mm;
+        height: 297mm;
+        max-height: 297mm;
+        margin: 0;
+        box-shadow: none;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+      }
+    }
+
+    @media screen and (max-width: 220mm) {
+      .sheet {
+        width: 100%;
+        min-height: auto;
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="sheet">
+    <header>
+      <h1>Patricia Ivana Veiga Hochsprung</h1>
+      <p class="titulo-cargo">Assistente Administrativo · Atendimento · Rotinas de Escritório</p>
+      <div class="contato">
+        <span><strong>Local:</strong> Joinville — SC</span>
+        <span><strong>Tel./WhatsApp:</strong> <a href="tel:+55479999080872">(47) 99908-0872</a></span>
+        <span><strong>E-mail:</strong> <a href="mailto:patricia.i.hochsprung@gmail.com">patricia.i.hochsprung@gmail.com</a></span>
+        <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/patricia-hochsprung" target="_blank" rel="noopener">linkedin.com/in/patricia-hochsprung</a></span>
+        <span><strong>CNH:</strong> B</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="objetivo">
+        <h2>Objetivo Profissional</h2>
+        <p>Atuar como Assistente Administrativo, aplicando habilidades em organização de documentos, atendimento ao cliente, controle de planilhas e rotinas de escritório para contribuir com a eficiência dos processos da empresa.</p>
+      </section>
+
+      <section>
+        <h2>Experiência Profissional</h2>
+
+        <div class="exp-item">
+          <div class="exp-cabecalho">
+            <div>
+              <div class="exp-empresa">Excelência Consultoria RH</div>
+              <div class="exp-cargo">Assistente Administrativo</div>
+            </div>
+          </div>
+          <ul>
+            <li>Agendamento de entrevistas, apoio em vendas e prestação de serviços de RH.</li>
+            <li>Organização de agenda, contato com candidatos e rotinas administrativas do escritório.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-cabecalho">
+            <div>
+              <div class="exp-empresa">Farmácia Angeloni</div>
+              <div class="exp-cargo">Assistente Farmacêutica / Atendimento e Administrativo</div>
+            </div>
+          </div>
+          <ul>
+            <li>Atendimento ao público, operação de caixa e suporte sobre medicamentos.</li>
+            <li>Reposição e organização da loja; entrada de notas fiscais e mapeamento de necessidades.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-cabecalho">
+            <div>
+              <div class="exp-empresa">Farmácia e Drogaria JK</div>
+              <div class="exp-cargo">Assistente Farmacêutica</div>
+            </div>
+          </div>
+          <ul>
+            <li>Atendimento no balcão, reposição de medicamentos e verificação de validade.</li>
+            <li>Aferição de pressão, aplicação de injetáveis e operação de caixa.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-cabecalho">
+            <div>
+              <div class="exp-empresa">Drogaria Araquari · Farmácia Santa Terezinha · Arte Sani · Animal Farma</div>
+              <div class="exp-cargo">Assistente Farmacêutica / Recepção</div>
+            </div>
+          </div>
+          <ul>
+            <li>Atendimento ao consumidor, cadastro de produtos em sistema e pedidos de compra.</li>
+            <li>Controle de validade, testes de glicemia e levantamento de feedbacks de clientes.</li>
+            <li>Recepção em manipulação (florais, antibióticos, cosméticos) e rotinas de balcão.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Formação Acadêmica</h2>
+        <div class="formacao-linha">
+          <strong>Ensino Médio Completo</strong>
+          <span class="formacao-inst">E.E. Plácido Olímpio de Oliveira — Joinville/SC</span>
+        </div>
+        <div class="formacao-linha">
+          <strong>Terceiro Grau (Superior)</strong>
+          <span class="formacao-inst">Em andamento / incompleto</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Habilidades e Competências</h2>
+        <ul class="skills-grid">
+          <li>Pacote Office (Excel, Word) — nível intermediário a avançado</li>
+          <li>Boa comunicação verbal e escrita</li>
+          <li>Organização, gestão de tempo e proatividade</li>
+          <li>Atendimento ao cliente e trabalho em equipe</li>
+          <li>Rotinas de faturamento e contas a pagar/receber</li>
+          <li>Entrada de notas fiscais e controle administrativo de loja</li>
+          <li>Sistemas: SAP, Method, Farma Fácil, Trier</li>
+          <li>Informática e operação de caixa / ERP de farmácia</li>
+          <li>Inglês e Espanhol — nível básico</li>
+          <li>Curso de Brigadista · CNH categoria B</li>
+        </ul>
+        <p class="extras">
+          <span><strong>Idiomas:</strong> Inglês (básico) · Espanhol (básico)</span>
+        </p>
+      </section>
+    </main>
+  </article>
+</body>
+</html>
