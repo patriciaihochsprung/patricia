@@ -30,6 +30,18 @@ Abra `index.html` no navegador ou use uma extensão Live Server.
 4. EPI — NR-6
 5. Benzeno — NR-20 Anexo IV
 
-## Gerar PDF (opcional)
+## Currículo em PDF
 
-No navegador: `Ctrl+P` → Salvar como PDF. Para versão compacta de uma página, use margens mínimas e desative elementos extras se necessário.
+- **Arquivo:** `public/curriculo.pdf` — versão profissional para impressão e envio a recrutadores.
+- **Botão no site:** “Ver PDF” (hero e menu).
+- **Página de impressão:** `curriculo-print.html` (visualizar ou imprimir manualmente).
+
+### Regenerar o PDF (Windows + Edge)
+
+```powershell
+$uri = [uri]::new("d:\Projetos\Patricia\patricia\curriculo-print.html").AbsoluteUri
+& "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" `
+  --headless --disable-gpu --print-to-pdf="d:\Projetos\Patricia\patricia\public\curriculo.pdf" $uri
+```
+
+Edite `curriculo-print.html` antes de rodar o comando, se alterar o conteúdo do currículo.
